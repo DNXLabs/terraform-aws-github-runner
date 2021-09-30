@@ -1,140 +1,76 @@
-# Contributing to Forest Terraform
+# Contributing
 
-We'd love for you to contribute to our source code and to make the Forest even better than it is today! Here are the guidelines we'd like you to follow:
+When contributing to this repository, please first discuss the change you wish to make via issue,
+email, or any other method with the owners of this repository before making a change. 
 
- - [Question or Problem?](#question)
- - [Issues and Bugs](#issue)
- - [Feature Requests](#feature)
- - [Submission Guidelines](#submit)
- - [Further Info](#info)
+Please note we have a code of conduct, please follow it in all your interactions over the project.
 
-## <a name="question"></a> Got a Question or Problem?
+## Reporting Bugs
 
-If you have questions about how to use the Forest, please direct these to the [Slack group / philips-software][slack].
+This section guides you through submitting a bug report for DNX. Following these guidelines helps maintainers and the community understand your report, reproduce the behavior, and find related reports.
 
-[![Slack](https://philips-software-slackin.now.sh/badge.svg)](https://philips-software-slackin.now.sh)
-
-## <a name="issue"></a> Found an Issue?
-
-If you find a bug in the source code or a mistake in the documentation, you can help us by submitting an issue to our [Github Repository][github]. Even better you can submit a Pull Request with a fix.
-
-**Please see the [Submission Guidelines](#submit) below.**
-
-## <a name="feature"></a> Want a Feature?
-
-You can request a new feature by submitting an issue to our [Github Repository][github]. If you would like to implement a new feature then consider what kind of change it is:
-
-* **Major Changes** that you wish to contribute to the project should be discussed first on our [Slack group][slack] so that we can better coordinate our efforts, prevent duplication of work, and help you to craft the change so that it is successfully accepted into the project.
-* **Small Changes** can be crafted and submitted to the [Github Repository][github] as a Pull Request.
+Before creating bug reports, please check this list as you might find out that you don't need to create one. When you are creating a bug report, please [include as many details as possible](#how-do-i-submit-a-good-bug-report). Fill out [the required template, the information it asks for helps us resolve issues faster.
 
 
-## <a name="docs"></a> Want a Doc Fix?
+#### How Do I Submit A (Good) Bug Report?
 
-If you want to help improve the docs, it's a good idea to let others know what you're working on to minimize duplication of effort. Create a new issue (or comment on a related existing one) to let others know what you're working on.
+Bugs are tracked as [GitHub issues](https://guides.github.com/features/issues/). Create an issue on the repository and provide the following information by filling in the template.
 
-For large fixes, please build and test the documentation before submitting the MR to be sure you haven't accidentally introduced any layout or formatting issues. You should also make sure that your commit message starts with "docs" and follows the **[Commit Message Guidelines](#commit)** outlined below.
+Explain the problem and include additional details to help maintainers reproduce the problem:
 
-## <a name="submit"></a> Submission Guidelines
+* **Use a clear and descriptive title** for the issue to identify the problem.
+* **Describe the exact steps which reproduce the problem** in as many details as possible. For example, start by explaining how you started the module, e.g. which command exactly you used in the terminal.
+* **Provide specific examples to demonstrate the steps**. Include links to files or GitHub projects, or copy/pasteable snippets, which you use in those examples. If you're providing snippets in the issue, use [Markdown code blocks](https://docs.github.com/pt/github/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks).
+* **Describe the behavior you observed after following the steps** and point out what exactly is the problem with that behavior.
+* **If the problem wasn't triggered by a specific action**, describe what you were doing before the problem happened and share more information using the guidelines below.
 
-### Submitting an Issue
-Before you submit your issue search the archive, maybe your question was already answered.
+Provide more context by answering these questions:
 
-If your issue appears to be a bug, and hasn't been reported, open a new issue. Help us to maximize the effort we can spend fixing issues and adding new features, by not reporting duplicate issues. Providing the following information will increase the chances of your issue being dealt with quickly:
+* **Did the problem start happening recently** (e.g. after updating to a new version of Terraform) or was this always a problem?
+* If the problem started happening recently, **can you reproduce the problem in an older version of Terraform?** What's the most recent version in which the problem doesn't happen? You can download older versions of Terraform from [the releases page](https://github.com/hashicorp/terraform/releases).
+* **Can you reliably reproduce the issue?** If not, provide details about how often the problem happens and under which conditions it normally happens.
+* If the problem is related to working with files (e.g. opening and editing files), **does the problem happen for all files and projects or only some?** Does the problem happen only when working with local or remote files (e.g. on network drives), with files of a specific type (e.g. only JavaScript or Python files), with large files or files with very long lines, or with files in a specific encoding? Is there anything else special about the files you are using?
+### Suggesting Enhancements
 
-* **Overview of the Issue** - if an error is being thrown a non-minified stack trace helps
-* **Motivation for or Use Case** - explain why this is a bug for you
-* **Forest Version(s)** - is it a regression?
-* **Reproduce the Error** - try to describe how to reproduce the error
-* **Related Issues** - has a similar issue been reported before?
-* **Suggest a Fix** - if you can't fix the bug yourself, perhaps you can point to what might be
-  causing the problem (line of code or commit)
+This section guides you through submitting an enhancement suggestion for DNX modules, including completely new features and minor improvements to existing functionality. Following these guidelines helps maintainers and the community understand your suggestion and find related suggestions.
 
-**If you get help, help others. Good karma rulez!**
+Before creating enhancement suggestions, please check issues as you might find out that you don't need to create one. When you are creating an enhancement suggestion, please include as many details as possible. Fill in the template, including the steps that you imagine you would take if the feature you're requesting existed.
 
-### Submitting a Merge Request
+#### How Do I Submit A (Good) Enhancement Suggestion?
 
-Before you submit your merge request consider the following guidelines:
+Enhancement suggestions are tracked as [GitHub issues](https://guides.github.com/features/issues/). Create an issue on that repository and provide the following information:
 
-* Make your changes in a new git branch:
+* **Use a clear and descriptive title** for the issue to identify the suggestion.
+* **Provide a step-by-step description of the suggested enhancement** in as many details as possible.
+* **Provide specific examples to demonstrate the steps**. Include copy/pasteable snippets which you use in those examples, as [Markdown code blocks](https://help.github.com/articles/markdown-basics/#multiple-lines).
+* **Describe the current behavior** and **explain which behavior you expected to see instead** and why.
+* **Include screenshots and animated GIFs** which help you demonstrate the steps or point out the part of code which the suggestion is related. You can use [this tool](https://www.cockos.com/licecap/) to record GIFs on macOS and Windows, and [this tool](https://github.com/colinkeenan/silentcast) or [this tool](https://gitlab.gnome.org/Archive/byzanz) on Linux.
+* **Explain why this enhancement would be useful** to most Terraform users and isn't something that can or should be implemented as a community package.
+* **Specify which version of Terraform you're using.** You can get the exact version by running `terraform -v` in your terminal.
+* **Specify the name and version of the OS you're using.**
 
-    ```shell
-    git checkout -b my-fix-branch master
-    ```
 
-* Create your patch, **including appropriate test cases**.
-* Run the test suite and ensure that all tests pass.
-* Add a line in the CHANGELOG.md under Unreleased. This will be used form generating the release notes.
-* Install [pre-commit hooks](https://pre-commit.com/). The hooks runs some basic checks and update the docs. The commit will run the hooks, you can invoke the hooks manually `pre-commit run --all-files` as well.
-* Commit your changes using a descriptive commit message.
+## Pull Request Process
 
-    ```shell
-    git commit -a
-    ```
-  Note: the optional commit `-a` command line option will automatically "add" and "rm" edited files.
+The process described here has several goals:
 
-* Build your changes locally to ensure all the tests pass:
-* Push your branch to Github:
+- Fix problems that are important to users.
 
-    ```shell
-    git push origin my-fix-branch
-    ```
+1. Update the README.md with details of changes to the interface, this includes new environment variables, exposed ports, useful file locations, and container parameters.
+2. Increase the version numbers in any examples files and the README.md to the new version that this
+   Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
+3. You may merge the Pull Request in once you have the sign-off of two other developers, or if you do not have permission to do that, you may request the second reviewer to merge it for you.
+4. Follow all instructions in [the template](./.github/pull_request_template.md).
+5. Follow the [styleguides](https://docs.dnx.one/docs/style-guide/terraform-style-guide.html).
+6. After you submit your pull request, verify that all [status checks](https://help.github.com/articles/about-status-checks/) are passing. <details><summary>What if the status checks are failing?</summary>If a status check is failing, and you believe that the failure is unrelated to your change, please leave a comment on the pull request explaining why you believe the failure is unrelated. A maintainer will re-run the status check for you. If we conclude that the failure was a false positive, then we will open an issue to track that problem with our status check suite.</details>
 
-In Github, send a pull request to original master branch: f.e. `terraform-aws-vpc:master`.
-If we suggest changes, then:
+While the prerequisites above must be satisfied prior to have your pull request reviewed, the reviewer(s) may ask you to complete additional design work, tests, or other changes before your pull request can be ultimately accepted.
 
-* Make the required updates.
-* Re-run the test suite to ensure tests are still passing.
-* Commit your changes to your branch (e.g. `my-fix-branch`).
-* Push the changes to your Github repository (this will update your Pull Request).
+### Your First Code Contribution
 
-If the PR gets too outdated we may ask you to rebase and force push to update the PR:
+Unsure where to begin contributing to DNX? You can start by looking through these `beginner` and `help-wanted` issues:
 
-```shell
-git rebase master -i
-git push origin my-fix-branch -f
-```
+* `beginner` - issues that should only require a few lines of code, and a test or two.
+* `help-wanted` - issues which should be a bit more involved than `beginner` issues.
 
-_WARNING: Squashing or reverting commits and force-pushing thereafter may remove Github comments on code that were previously made by you or others in your commits. Avoid any form of rebasing unless necessary._
-
-That's it! Thank you for your contribution!
-
-#### After your merge request is merged
-
-After your pull request is merged, you can safely delete your branch and pull the changes
-from the main (upstream) repository:
-
-* Delete the remote branch on Github either through the Github web UI or your local shell as follows:
-
-    ```shell
-    git push origin --delete my-fix-branch
-    ```
-
-* Check out the master branch:
-
-    ```shell
-    git checkout master -f
-    ```
-
-* Delete the local branch:
-
-    ```shell
-    git branch -D my-fix-branch
-    ```
-
-* Update your master with the latest upstream version:
-
-    ```shell
-    git pull --ff upstream master
-    ```
-
-## <a name="info"></a> Info
-
-For more info, please reach out to the team on [Slack group / philips-software][slack] in the #forest channel.
-
-Use the badge to sign-up.
-
-[![Slack](https://philips-software-slackin.now.sh/badge.svg)](https://philips-software-slackin.now.sh)
-
-[contribute]: CONTRIBUTING.md
-[github]: https://github.com/philips-lam/terraform-aws-github-runner/issues 
-[slack]: https://philips-software.slack.com/home
+Both issue lists are sorted by the total number of comments. While not perfect, the number of comments is a reasonable proxy for the impact a given change will have.
