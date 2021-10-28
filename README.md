@@ -289,7 +289,8 @@ In case the setup does not work as intended follow the trace of events:
 - Once an EC2 instance is running, you can connect to it in the EC2 user interface using Session Manager. Check the user data script using `cat /var/log/user-data.log`. By default several log files of the instances are streamed to AWS CloudWatch, look for a log group named `<environment>/runners`. In the log group you should see at least the log streams for the user data installation and runner agent.
 - Registered instances should show up in the Settings - Actions page of the repository or organization (depending on the installation mode).
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!--- BEGIN_TF_DOCS --->
+
 ## Requirements
 
 No requirements.
@@ -328,7 +329,7 @@ No requirements.
 | lambda\_subnet\_ids | List of subnets in which the action runners will be launched, the subnets needs to be subnets in the `vpc_id`. | `list(string)` | `[]` | no |
 | logging\_retention\_in\_days | Specifies the number of days you want to retain log events for the lambda log group. Possible values are: 0, 1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, and 3653. | `number` | `180` | no |
 | manage\_kms\_key | Let the module manage the KMS key. | `bool` | `true` | no |
-| market\_options | Set it to null to use on demand runners. | `string` | `"spot"` | no |
+| market\_options | Market options for the action runner instances. Setting the value to `null` let the scaler create on-demand instances instead of spot instanes. | `string` | `"spot"` | no |
 | minimum\_running\_time\_in\_minutes | The time an ec2 action runner should be running at minimum before terminated if non busy. | `number` | `5` | no |
 | role\_path | The path that will be added to role path for created roles, if not set the environment name will be used. | `string` | `null` | no |
 | role\_permissions\_boundary | Permissions boundary that will be added to the created roles. | `string` | `null` | no |
@@ -369,7 +370,7 @@ No requirements.
 | runners | n/a |
 | webhook | n/a |
 
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!--- END_TF_DOCS --->
 
 ## Contribution
 
